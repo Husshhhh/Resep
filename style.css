@@ -1,0 +1,132 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya dasar */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f9f9f9;
+}
+
+header {
+    background-image: url('Pemandangan.jpg'); /* Gambar latar untuk header */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ff6347;
+    padding: 15px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #ff4500;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.intro {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    color: #ff6347;
+}
+
+.featured-recipes {
+    margin-bottom: 20px;
+}
+
+.recipe {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.recipe h3 {
+    color: #ff6347;
+}
+
+.recipe:hover {
+    transform: translateY(-5px);
+}
+
+.about {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #ff6347;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Efek Responsif */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .nav-link {
+        padding: 5px 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
