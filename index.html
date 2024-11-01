@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resep Makanan & Minuman</title>
+    <title>Kumpulan Resep Makanan & Minuman</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,13 +17,13 @@
         <a href="minuman.html" class="nav-link">Minuman</a>
     </nav>
     <main>
-        <section class="intro">
+        <section class="intro main-section">
             <h2>Jelajahi Resep Terbaik</h2>
             <p>Temukan inspirasi masakan dari berbagai kategori. Kami memiliki resep untuk makanan berat, ringan, dan minuman yang cocok untuk semua kesempatan.</p>
             <p>Berikut adalah beberapa resep unggulan yang bisa Anda coba:</p>
         </section>
 
-        <section class="featured-recipes">
+        <section class="featured-recipes main-section">
             <h2>Resep Unggulan</h2>
             <div class="recipe">
                 <h3>Nasi Goreng Spesial</h3>
@@ -39,7 +39,7 @@
             </div>
         </section>
         
-        <section class="about">
+        <section class="about main-section">
             <h2>Tentang Kami</h2>
             <p>Kami adalah komunitas pecinta kuliner yang ingin berbagi resep terbaik dari berbagai penjuru dunia. Setiap resep telah dicoba dan disesuaikan agar mudah diikuti, bahkan untuk pemula sekalipun.</p>
             <p>Ikuti kami untuk menemukan lebih banyak resep dan tips memasak yang menarik!</p>
@@ -48,5 +48,20 @@
     <footer>
         <p>&copy; 2024 Resep Makanan & Minuman. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const sections = document.querySelectorAll('.main-section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
